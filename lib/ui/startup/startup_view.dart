@@ -25,7 +25,12 @@ class StartupView extends StatelessWidget {
       ) {
         var blocks = <Widget>[
           SizedBox(height: 550),
-          BlockWrapper(GetStarted(callback: () => model.showCreateDialog())),
+          BlockWrapper(
+            GetStarted(
+              callback: () => model.showCreateDialog(),
+              navigateToShowcase: () => model.navigateToShowcaseView(),
+            ),
+          ),
           BlockWrapper(Features()),
           Footer(
             navigateToShowcase: () => model.navigateToShowcaseView(),

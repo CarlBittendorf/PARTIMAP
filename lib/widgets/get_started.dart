@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:partimap/components/colors.dart';
 import 'package:partimap/components/spacing.dart';
@@ -6,7 +7,9 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 class GetStarted extends StatelessWidget {
   final void Function()? callback;
-  const GetStarted({Key? key, this.callback}) : super(key: key);
+  final void Function()? navigateToShowcase;
+  const GetStarted({Key? key, this.callback, this.navigateToShowcase})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -94,6 +97,29 @@ class GetStarted extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 16),
+                child: RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'Or check out some ',
+                        style: bodyTextStyle,
+                      ),
+                      TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = navigateToShowcase,
+                        text: 'examples',
+                        style: bodyLinkTextStyle,
+                      ),
+                      TextSpan(
+                        text: '.',
+                        style: bodyTextStyle,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
