@@ -21,7 +21,7 @@ class ShowcaseView extends StatelessWidget {
         MouseRegion(
           cursor: SystemMouseCursors.click,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () => model.navigateToGraphView(model.ids[i]),
             child: Card(
               elevation: 8,
               //clipBehavior: Clip.antiAlias,
@@ -127,12 +127,12 @@ class ShowcaseView extends StatelessWidget {
                               itemBuilder: (context, index) =>
                                   AnimationConfiguration.staggeredGrid(
                                 delay: Duration(milliseconds: 150),
-                                duration: const Duration(milliseconds: 600),
+                                duration: const Duration(milliseconds: 800),
                                 position: index,
                                 columnCount: 5, //!!!
                                 child: SlideAnimation(
-                                  verticalOffset: 200,
-                                  horizontalOffset: 200,
+                                  verticalOffset: 500,
+                                  horizontalOffset: 500,
                                   child: grid[index],
                                 ),
                               ),

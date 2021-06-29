@@ -40,6 +40,13 @@ class ShowcaseViewModel extends FutureViewModel {
     }
   }
 
+  Future navigateToGraphView(String id) async {
+    _navigationService.navigateTo(
+      Routes.graphView,
+      parameters: <String, String>{"id": id},
+    );
+  }
+
   @override
   Future futureToRun() => _firestoreService.getGraphs();
 

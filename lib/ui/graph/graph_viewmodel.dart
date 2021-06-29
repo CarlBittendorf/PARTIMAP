@@ -22,6 +22,7 @@ class GraphViewModel extends StreamViewModel<Graph> {
     if (id != null) {
       return id;
     } else {
+      print('Not found');
       return 'Not found'; //!!!
     }
   }
@@ -287,7 +288,7 @@ class GraphViewModel extends StreamViewModel<Graph> {
       _oxs = xs.map((e) => 0.5 + ((4 * i) / 100) * (e - 0.5)).toList();
       _oys = ys.map((e) => 0.5 + ((4 * i) / 100) * (e - 0.5)).toList();
       notifyListeners();
-      await Future.delayed(Duration(milliseconds: 10));
+      await Future.delayed(Duration(milliseconds: 8));
     }
   }
 

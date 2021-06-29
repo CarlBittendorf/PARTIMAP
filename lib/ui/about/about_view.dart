@@ -24,7 +24,7 @@ class AboutView extends StatelessWidget {
           SizedBox(height: 300),
           Center(
             child: Text(
-              'AboutView',
+              'AboutView, work in progress',
             ),
           ),
           SizedBox(height: 300),
