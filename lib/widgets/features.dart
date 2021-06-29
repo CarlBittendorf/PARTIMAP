@@ -37,8 +37,8 @@ class Features extends StatelessWidget {
               child: Column(
                 children: AnimationConfiguration.toStaggeredList(
                   childAnimationBuilder: (widget) => SlideAnimation(
-                    delay: Duration(milliseconds: 450),
-                    duration: const Duration(milliseconds: 300),
+                    delay: Duration(milliseconds: 150),
+                    duration: const Duration(milliseconds: 600),
                     verticalOffset: 100,
                     child: widget,
                   ),
@@ -67,8 +67,8 @@ class Features extends StatelessWidget {
               child: Column(
                 children: AnimationConfiguration.toStaggeredList(
                   childAnimationBuilder: (widget) => SlideAnimation(
-                    delay: Duration(milliseconds: 450),
-                    duration: const Duration(milliseconds: 300),
+                    delay: Duration(milliseconds: 150),
+                    duration: const Duration(milliseconds: 600),
                     verticalOffset: 100,
                     child: widget,
                   ),
