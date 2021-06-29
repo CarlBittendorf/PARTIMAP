@@ -133,7 +133,7 @@ class GraphBar extends StatelessWidget {
           MouseRegion(
             cursor: SystemMouseCursors.click,
             child: GestureDetector(
-              onTap: () => openUrl('https://github.com/CarlBittendorf'),
+              onTap: () => openUrl('https://github.com/CarlBittendorf/PARTIMAP'),
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8),
                 child: ImageIcon(
