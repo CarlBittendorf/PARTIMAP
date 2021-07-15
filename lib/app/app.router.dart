@@ -11,6 +11,7 @@ import 'package:stacked/stacked.dart';
 
 import '../ui/about/about_view.dart';
 import '../ui/graph/graph_view.dart';
+import '../ui/imprint/imprint_view.dart';
 import '../ui/showcase/showcase_view.dart';
 import '../ui/startup/startup_view.dart';
 
@@ -19,11 +20,13 @@ class Routes {
   static const String graphView = '/graph-view';
   static const String showcaseView = '/showcase-view';
   static const String aboutView = '/about-view';
+  static const String imprintView = '/imprint-view';
   static const all = <String>{
     startupView,
     graphView,
     showcaseView,
     aboutView,
+    imprintView,
   };
 }
 
@@ -35,6 +38,7 @@ class StackedRouter extends RouterBase {
     RouteDef(Routes.graphView, page: GraphView),
     RouteDef(Routes.showcaseView, page: ShowcaseView),
     RouteDef(Routes.aboutView, page: AboutView),
+    RouteDef(Routes.imprintView, page: ImprintView),
   ];
   @override
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
@@ -60,6 +64,12 @@ class StackedRouter extends RouterBase {
     AboutView: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => const AboutView(),
+        settings: data,
+      );
+    },
+    ImprintView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const ImprintView(),
         settings: data,
       );
     },

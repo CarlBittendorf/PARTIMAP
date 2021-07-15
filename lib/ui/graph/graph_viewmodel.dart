@@ -292,12 +292,20 @@ class GraphViewModel extends StreamViewModel<Graph> {
     }
   }
 
+  Future navigateToHomeView() async {
+    _navigationService.navigateTo(Routes.startupView);
+  }
+
   Future navigateToAboutView() async {
     _navigationService.navigateTo(Routes.aboutView);
   }
 
   Future navigateToShowcaseView() async {
     _navigationService.navigateTo(Routes.showcaseView);
+  }
+
+  Future navigateToImprintView() async {
+    _navigationService.navigateTo(Routes.imprintView);
   }
 
   Future showInfoDialog() async {

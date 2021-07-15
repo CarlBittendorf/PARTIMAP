@@ -6,14 +6,18 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 class MenuBar extends StatelessWidget {
   final void Function()? getStarted;
+  final void Function()? navigateToHome;
   final void Function()? navigateToShowcase;
   final void Function()? navigateToAbout;
+  final void Function()? navigateToImprint;
 
   const MenuBar(
       {Key? key,
       this.getStarted,
       this.navigateToAbout,
-      this.navigateToShowcase})
+      this.navigateToShowcase,
+      this.navigateToImprint,
+      this.navigateToHome})
       : super(key: key);
 
   @override
@@ -40,12 +44,36 @@ class MenuBar extends StatelessWidget {
               onTap: () {},
               child: Padding(
                 padding: EdgeInsets.fromLTRB(0, 5, 16, 5),
-                child: Image.asset("assets/images/logo.png",
-                    height: 37, fit: BoxFit.contain),
+                child: Image.asset(
+                  "assets/images/logo.png",
+                  height: 37,
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
           ),
           Spacer(),
+          ResponsiveVisibility(
+            visible: false,
+            visibleWhen: [Condition.largerThan(name: MOBILE)],
+            child: MouseRegion(
+              cursor: SystemMouseCursors.click,
+              child: GestureDetector(
+                onTap: navigateToHome,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    "Home",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: navLinkColor,
+                      fontFamily: fontFamily,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
           ResponsiveVisibility(
             visible: false,
             visibleWhen: [Condition.largerThan(name: MOBILE)],
@@ -58,9 +86,10 @@ class MenuBar extends StatelessWidget {
                   child: Text(
                     "Showcase",
                     style: TextStyle(
-                        fontSize: 16,
-                        color: navLinkColor,
-                        fontFamily: fontFamily),
+                      fontSize: 16,
+                      color: navLinkColor,
+                      fontFamily: fontFamily,
+                    ),
                   ),
                 ),
               ),
@@ -78,9 +107,31 @@ class MenuBar extends StatelessWidget {
                   child: Text(
                     "About",
                     style: TextStyle(
-                        fontSize: 16,
-                        color: navLinkColor,
-                        fontFamily: fontFamily),
+                      fontSize: 16,
+                      color: navLinkColor,
+                      fontFamily: fontFamily,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          ResponsiveVisibility(
+            visible: false,
+            visibleWhen: [Condition.largerThan(name: MOBILE)],
+            child: MouseRegion(
+              cursor: SystemMouseCursors.click,
+              child: GestureDetector(
+                onTap: navigateToImprint,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    "Imprint",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: navLinkColor,
+                      fontFamily: fontFamily,
+                    ),
                   ),
                 ),
               ),
@@ -89,13 +140,17 @@ class MenuBar extends StatelessWidget {
           MouseRegion(
             cursor: SystemMouseCursors.click,
             child: GestureDetector(
-              onTap: () => openUrl('https://github.com/CarlBittendorf/PARTIMAP'),
+              onTap: () =>
+                  openUrl('https://github.com/CarlBittendorf/PARTIMAP'),
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8),
-                child: ImageIcon(
-                    AssetImage("assets/images/icon_github_64x.png"),
-                    color: navLinkColor,
-                    size: 24),
+                child: Tooltip(
+                  message: 'View code on GitHub',
+                  child: ImageIcon(
+                      AssetImage("assets/images/icon_github_64x.png"),
+                      color: navLinkColor,
+                      size: 24),
+                ),
               ),
             ),
           ),

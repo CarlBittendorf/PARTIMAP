@@ -49,74 +49,87 @@ class Features extends StatelessWidget {
                     ),
                     Padding(
                       padding: EdgeInsets.only(bottom: 16),
-                      child: Text("Fast Creation",
-                          style: headlineSecondaryTextStyle,
-                          textAlign: TextAlign.center),
-                    ),
-                    Text("Placeholder for text.",
-                        style: bodyTextStyle, textAlign: TextAlign.center),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          ResponsiveRowColumnItem(
-            rowFlex: 1,
-            rowFit: FlexFit.tight,
-            child: AnimationLimiter(
-              child: Column(
-                children: AnimationConfiguration.toStaggeredList(
-                  childAnimationBuilder: (widget) => SlideAnimation(
-                    delay: Duration(milliseconds: 150),
-                    duration: const Duration(milliseconds: 600),
-                    verticalOffset: 100,
-                    child: widget,
-                  ),
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 32),
-                      child: Text('Icon'),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 16),
-                      child: Text("Clear UI",
-                          style: headlineSecondaryTextStyle,
-                          textAlign: TextAlign.center),
-                    ),
-                    Text("Placeholder for text.",
-                        style: bodyTextStyle, textAlign: TextAlign.center),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          ResponsiveRowColumnItem(
-            rowFlex: 1,
-            rowFit: FlexFit.tight,
-            child: AnimationLimiter(
-              child: Column(
-                children: AnimationConfiguration.toStaggeredList(
-                  childAnimationBuilder: (widget) => SlideAnimation(
-                    delay: Duration(milliseconds: 150),
-                    duration: const Duration(milliseconds: 600),
-                    verticalOffset: 100,
-                    child: widget,
-                  ),
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 32),
-                      child: Text('Icon'),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 16),
-                      child: Text("Collaborate with others",
-                          style: headlineSecondaryTextStyle,
-                          textAlign: TextAlign.center),
+                      child: Text(
+                        "Fast Creation",
+                        style: headlineSecondaryTextStyle,
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                     Text(
-                        "Just share the link of your PARTIMAP and your colleagues can view and edit the same document. Changes are shown in real time.",
-                        style: bodyTextStyle,
-                        textAlign: TextAlign.center),
+                      "Placeholder for text.",
+                      style: bodyTextStyle,
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          ResponsiveRowColumnItem(
+            rowFlex: 1,
+            rowFit: FlexFit.tight,
+            child: AnimationLimiter(
+              child: Column(
+                children: AnimationConfiguration.toStaggeredList(
+                  childAnimationBuilder: (widget) => SlideAnimation(
+                    delay: Duration(milliseconds: 150),
+                    duration: const Duration(milliseconds: 600),
+                    verticalOffset: 100,
+                    child: widget,
+                  ),
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 32),
+                      child: Text('Icon'),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 16),
+                      child: Text(
+                        "Clear UI",
+                        style: headlineSecondaryTextStyle,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Text(
+                      "Placeholder for text.",
+                      style: bodyTextStyle,
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          ResponsiveRowColumnItem(
+            rowFlex: 1,
+            rowFit: FlexFit.tight,
+            child: AnimationLimiter(
+              child: Column(
+                children: AnimationConfiguration.toStaggeredList(
+                  childAnimationBuilder: (widget) => SlideAnimation(
+                    delay: Duration(milliseconds: 150),
+                    duration: const Duration(milliseconds: 600),
+                    verticalOffset: 100,
+                    child: widget,
+                  ),
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 32),
+                      child: Text('Icon'),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 16),
+                      child: Text(
+                        "Collaborate with others",
+                        style: headlineSecondaryTextStyle,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Text(
+                      "Just share the link of your PARTIMAP and your colleagues can view and edit the same document. Changes are shown in real time.",
+                      style: bodyTextStyle,
+                      textAlign: TextAlign.center,
+                    ),
                   ],
                 ),
               ),

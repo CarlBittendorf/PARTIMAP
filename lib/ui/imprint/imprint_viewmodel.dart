@@ -18,6 +18,10 @@ class ImprintViewModel extends BaseViewModel {
     _navigationService.navigateTo(Routes.showcaseView);
   }
 
+  Future navigateToAboutView() async {
+    _navigationService.navigateTo(Routes.aboutView);
+  }
+
   Future showCreateDialog() async {
     var response = await _dialogService.showCustomDialog(
       variant: DialogType.create,

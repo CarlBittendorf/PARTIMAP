@@ -146,6 +146,7 @@ class ShowcaseView extends StatelessWidget {
           Footer(
             navigateToHome: () => model.navigateToHomeView(),
             navigateToAbout: () => model.navigateToAboutView(),
+            navigateToImprint: () => model.navigateToImprintView(),
           ),
         ];
         return ResponsiveWrapper.builder(
@@ -156,7 +157,9 @@ class ShowcaseView extends StatelessWidget {
                 preferredSize: Size(double.infinity, 66),
                 child: MenuBar(
                   getStarted: () => model.showCreateDialog(),
+                  navigateToHome: () => model.navigateToHomeView(),
                   navigateToAbout: () => model.navigateToAboutView(),
+                  navigateToImprint: () => model.navigateToImprintView(),
                 ),
               ),
               body: ListView.builder(

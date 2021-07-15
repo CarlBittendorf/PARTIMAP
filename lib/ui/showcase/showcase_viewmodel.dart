@@ -19,6 +19,10 @@ class ShowcaseViewModel extends FutureViewModel {
     _navigationService.navigateTo(Routes.aboutView);
   }
 
+  Future navigateToImprintView() async {
+    _navigationService.navigateTo(Routes.imprintView);
+  }
+
   Future showCreateDialog() async {
     var response = await _dialogService.showCustomDialog(
       variant: DialogType.create,

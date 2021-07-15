@@ -102,8 +102,10 @@ class GraphView extends StatelessWidget {
                 preferredSize: Size(double.infinity, 66),
                 child: GraphBar(
                   name: model.graph.name,
+                  navigateToHome: () => model.navigateToHomeView(),
                   navigateToShowcase: () => model.navigateToShowcaseView(),
                   navigateToAbout: () => model.navigateToAboutView(),
+                  navigateToImprint: () => model.navigateToImprintView(),
                   addVertex: () => model.addUnconnectedVertex(),
                   copyToClipboard: () => model.copyToClipboard(),
                   showInfo: () => model.showInfoDialog(),

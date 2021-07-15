@@ -9,6 +9,9 @@ const TextStyle headlineTextStyle = TextStyle(
 const TextStyle headlineSecondaryTextStyle = TextStyle(
     fontSize: 28, color: textPrimary, height: 1.2, fontFamily: fontFamily);
 
+const TextStyle headlineTertiaryTextStyle =
+    TextStyle(fontSize: 24, color: textPrimary, fontFamily: fontFamily);
+
 const TextStyle bodyTextStyle = TextStyle(
     fontSize: 16, color: textPrimary, height: 1.5, fontFamily: "Roboto");
 

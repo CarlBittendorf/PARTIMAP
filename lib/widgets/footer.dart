@@ -8,12 +8,14 @@ class Footer extends StatelessWidget {
   final void Function()? navigateToHome;
   final void Function()? navigateToShowcase;
   final void Function()? navigateToAbout;
+  final void Function()? navigateToImprint;
 
   const Footer(
       {Key? key,
       this.navigateToAbout,
       this.navigateToShowcase,
-      this.navigateToHome})
+      this.navigateToHome,
+      this.navigateToImprint})
       : super(key: key);
 
   @override
@@ -63,6 +65,12 @@ class Footer extends StatelessWidget {
                         recognizer: TapGestureRecognizer()
                           ..onTap = navigateToAbout,
                         text: "About",
+                      ),
+                      TextSpan(text: "  •  "),
+                      TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = navigateToImprint,
+                        text: "Imprint",
                       ),
                     ],
                   ),

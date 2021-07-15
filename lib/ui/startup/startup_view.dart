@@ -35,6 +35,7 @@ class StartupView extends StatelessWidget {
           Footer(
             navigateToShowcase: () => model.navigateToShowcaseView(),
             navigateToAbout: () => model.navigateToAboutView(),
+            navigateToImprint: () => model.navigateToImprintView(),
           ),
         ];
         return ResponsiveWrapper.builder(
@@ -47,6 +48,7 @@ class StartupView extends StatelessWidget {
                   getStarted: () => model.showCreateDialog(),
                   navigateToShowcase: () => model.navigateToShowcaseView(),
                   navigateToAbout: () => model.navigateToAboutView(),
+                  navigateToImprint: () => model.navigateToImprintView(),
                 ),
               ),
               body: ListView.builder(

@@ -6,8 +6,10 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 class GraphBar extends StatelessWidget {
   final String name;
+  final void Function()? navigateToHome;
   final void Function()? navigateToShowcase;
   final void Function()? navigateToAbout;
+  final void Function()? navigateToImprint;
   final void Function()? addVertex;
   final void Function()? copyToClipboard;
   final void Function()? showInfo;
@@ -19,7 +21,9 @@ class GraphBar extends StatelessWidget {
       this.copyToClipboard,
       this.addVertex,
       this.showInfo,
-      this.navigateToShowcase})
+      this.navigateToShowcase,
+      this.navigateToHome,
+      this.navigateToImprint})
       : super(key: key);
 
   @override
@@ -66,15 +70,37 @@ class GraphBar extends StatelessWidget {
             child: MouseRegion(
               cursor: SystemMouseCursors.click,
               child: GestureDetector(
+                onTap: navigateToHome,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    "Home",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: navLinkColor,
+                      fontFamily: fontFamily,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          ResponsiveVisibility(
+            visible: false,
+            visibleWhen: [Condition.largerThan(name: MOBILE)],
+            child: MouseRegion(
+              cursor: SystemMouseCursors.click,
+              child: GestureDetector(
                 onTap: navigateToShowcase,
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16),
                   child: Text(
                     "Showcase",
                     style: TextStyle(
-                        fontSize: 16,
-                        color: navLinkColor,
-                        fontFamily: fontFamily),
+                      fontSize: 16,
+                      color: navLinkColor,
+                      fontFamily: fontFamily,
+                    ),
                   ),
                 ),
               ),
@@ -92,9 +118,31 @@ class GraphBar extends StatelessWidget {
                   child: Text(
                     "About",
                     style: TextStyle(
-                        fontSize: 16,
-                        color: navLinkColor,
-                        fontFamily: fontFamily),
+                      fontSize: 16,
+                      color: navLinkColor,
+                      fontFamily: fontFamily,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          ResponsiveVisibility(
+            visible: false,
+            visibleWhen: [Condition.largerThan(name: MOBILE)],
+            child: MouseRegion(
+              cursor: SystemMouseCursors.click,
+              child: GestureDetector(
+                onTap: navigateToImprint,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    "Imprint",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: navLinkColor,
+                      fontFamily: fontFamily,
+                    ),
                   ),
                 ),
               ),
@@ -106,7 +154,10 @@ class GraphBar extends StatelessWidget {
               onTap: addVertex,
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8),
-                child: Icon(Icons.add, color: navLinkColor, size: 24),
+                child: Tooltip(
+                  message: 'Add vertex',
+                  child: Icon(Icons.add, color: navLinkColor, size: 24),
+                ),
               ),
             ),
           ),
@@ -116,7 +167,10 @@ class GraphBar extends StatelessWidget {
               onTap: copyToClipboard,
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8),
-                child: Icon(Icons.copy, color: navLinkColor, size: 24),
+                child: Tooltip(
+                  message: 'Copy link',
+                  child: Icon(Icons.copy, color: navLinkColor, size: 24),
+                ),
               ),
             ),
           ),
@@ -126,20 +180,29 @@ class GraphBar extends StatelessWidget {
               onTap: showInfo,
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8),
-                child: Icon(Icons.info_outlined, color: navLinkColor, size: 24),
+                child: Tooltip(
+                  message: 'Info',
+                  child:
+                      Icon(Icons.info_outlined, color: navLinkColor, size: 24),
+                ),
               ),
             ),
           ),
           MouseRegion(
             cursor: SystemMouseCursors.click,
             child: GestureDetector(
-              onTap: () => openUrl('https://github.com/CarlBittendorf/PARTIMAP'),
+              onTap: () =>
+                  openUrl('https://github.com/CarlBittendorf/PARTIMAP'),
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8),
-                child: ImageIcon(
+                child: Tooltip(
+                  message: 'View code on GitHub',
+                  child: ImageIcon(
                     AssetImage("assets/images/icon_github_64x.png"),
                     color: navLinkColor,
-                    size: 24),
+                    size: 24,
+                  ),
+                ),
               ),
             ),
           ),

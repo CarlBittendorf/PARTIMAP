@@ -31,6 +31,7 @@ class AboutView extends StatelessWidget {
           Footer(
             navigateToHome: () => model.navigateToHomeView(),
             navigateToShowcase: () => model.navigateToShowcaseView(),
+            navigateToImprint: () => model.navigateToImprintView(),
           ),
         ];
         return ResponsiveWrapper.builder(
@@ -40,7 +41,9 @@ class AboutView extends StatelessWidget {
               appBar: PreferredSize(
                 preferredSize: Size(double.infinity, 66),
                 child: MenuBar(
+                  navigateToHome: () => model.navigateToHomeView(),
                   navigateToShowcase: () => model.navigateToShowcaseView(),
+                  navigateToImprint: () => model.navigateToImprintView(),
                   getStarted: () => model.showCreateDialog(),
                 ),
               ),

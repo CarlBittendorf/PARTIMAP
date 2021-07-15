@@ -33,6 +33,10 @@ class StartupViewModel extends BaseViewModel {
     _navigationService.navigateTo(Routes.showcaseView);
   }
 
+    Future navigateToImprintView() async {
+    _navigationService.navigateTo(Routes.imprintView);
+  }
+
   Future showCreateDialog() async {
     var response = await _dialogService.showCustomDialog(
       variant: DialogType.create,

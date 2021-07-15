@@ -6,7 +6,6 @@ part of 'graph.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-// ignore: non_constant_identifier_names
 _$_Graph _$_$_GraphFromJson(Map<String, dynamic> json) {
   return _$_Graph(
     name: json['name'] as String,
@@ -41,7 +40,6 @@ _$_Graph _$_$_GraphFromJson(Map<String, dynamic> json) {
   );
 }
 
-// ignore: non_constant_identifier_names
 Map<String, dynamic> _$_$_GraphToJson(_$_Graph instance) => <String, dynamic>{
       'name': instance.name,
       'specification': instance.specification,
