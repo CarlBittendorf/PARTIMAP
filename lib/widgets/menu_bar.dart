@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:partimap/components/colors.dart';
 import 'package:partimap/components/typography.dart';
@@ -50,6 +51,18 @@ class MenuBar extends StatelessWidget {
                   fit: BoxFit.contain,
                 ),
               ),
+            ),
+          ),
+          Container(
+            child: AnimatedTextKit(
+              totalRepeatCount: 1,
+              animatedTexts: [
+                TypewriterAnimatedText(
+                  'PARTIMAP',
+                  textStyle: headlineSecondaryTextStyle,
+                  speed: const Duration(milliseconds: 300),
+                ),
+              ],
             ),
           ),
           Spacer(),

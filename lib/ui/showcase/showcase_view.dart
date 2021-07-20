@@ -39,11 +39,12 @@ class ShowcaseView extends StatelessWidget {
                     Container(
                       height: 60,
                       child: Center(
-                        child: Text('Icon'),
+                        child: Icon(Icons.bubble_chart),
                       ),
                     ),
                     Text(
                       model.graphs[i].name,
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 24,
                         color: textPrimary,
@@ -170,7 +171,7 @@ class ShowcaseView extends StatelessWidget {
                   duration: const Duration(milliseconds: 600),
                   position: index,
                   child: SlideAnimation(
-                    verticalOffset: 100,
+                    verticalOffset: 150,
                     child: blocks[index],
                   ),
                 ),

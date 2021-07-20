@@ -54,6 +54,7 @@ class ImprintView extends StatelessWidget {
                       RichText(
                         text: TextSpan(
                           children: [HERAUSGEBER],
+                          style: bodyTextStyle,
                         ),
                       ),
                       Padding(
@@ -69,6 +70,7 @@ class ImprintView extends StatelessWidget {
                       RichText(
                         text: TextSpan(
                           children: [INHALTE],
+                          style: bodyTextStyle,
                         ),
                       ),
                       Padding(
@@ -84,6 +86,7 @@ class ImprintView extends StatelessWidget {
                       RichText(
                         text: TextSpan(
                           children: [VERWEISE],
+                          style: bodyTextStyle,
                         ),
                       ),
                       Padding(
@@ -99,6 +102,7 @@ class ImprintView extends StatelessWidget {
                       RichText(
                         text: TextSpan(
                           children: [URHEBERRECHT],
+                          style: bodyTextStyle,
                         ),
                       ),
                       Padding(
@@ -114,6 +118,7 @@ class ImprintView extends StatelessWidget {
                       RichText(
                         text: TextSpan(
                           children: [DATENSCHUTZ],
+                          style: bodyTextStyle,
                         ),
                       ),
                       Padding(
@@ -137,8 +142,10 @@ class ImprintView extends StatelessWidget {
                               text: 'http://www.disclaimer.de',
                               style: bodyLinkTextStyle,
                             ),
-                            TextSpan(text: '.'),
+                            TextSpan(text: '.',
+                            style: bodyTextStyle,),
                           ],
+                          style: bodyTextStyle,
                         ),
                       )
                     ],
@@ -182,8 +189,9 @@ class ImprintView extends StatelessWidget {
                                   'https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html',
                               style: bodyLinkTextStyle,
                             ),
-                            TextSpan(text: '.'),
+                            TextSpan(text: '.', style: bodyTextStyle,),
                           ],
+                          style: bodyTextStyle,
                         ),
                       ),
                     ],
@@ -230,6 +238,7 @@ class ImprintView extends StatelessWidget {
                       RichText(
                         text: TextSpan(
                           children: [ARTDERVERARBEITUNG],
+                          style: bodyTextStyle,
                         ),
                       ),
                       Padding(
@@ -245,6 +254,7 @@ class ImprintView extends StatelessWidget {
                       RichText(
                         text: TextSpan(
                           children: [RECHTSGRUNDLAGE],
+                          style: bodyTextStyle,
                         ),
                       ),
                       Padding(
@@ -260,6 +270,7 @@ class ImprintView extends StatelessWidget {
                       RichText(
                         text: TextSpan(
                           children: [EMPFAENGER],
+                          style: bodyTextStyle,
                         ),
                       ),
                       Padding(
@@ -275,6 +286,7 @@ class ImprintView extends StatelessWidget {
                       RichText(
                         text: TextSpan(
                           children: [SPEICHERDAUER],
+                          style: bodyTextStyle,
                         ),
                       ),
                       Padding(
@@ -291,6 +303,7 @@ class ImprintView extends StatelessWidget {
                       RichText(
                         text: TextSpan(
                           children: [BEREITSTELLUNG],
+                          style: bodyTextStyle,
                         ),
                       ),
                     ],
@@ -326,6 +339,7 @@ class ImprintView extends StatelessWidget {
                       RichText(
                         text: TextSpan(
                           children: [AENDERUNG],
+                          style: bodyTextStyle,
                         ),
                       ),
                       Padding(
@@ -341,6 +355,7 @@ class ImprintView extends StatelessWidget {
                       RichText(
                         text: TextSpan(
                           children: [FRAGEN],
+                          style: bodyTextStyle,
                         ),
                       ),
                     ],

@@ -45,18 +45,21 @@ class Features extends StatelessWidget {
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.only(bottom: 32),
-                      child: Text('Icon'),
+                      child: Icon(
+                        Icons.check,
+                        size: 40.0,
+                      ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(bottom: 16),
                       child: Text(
-                        "Fast Creation",
+                        "Free and Open-Source",
                         style: headlineSecondaryTextStyle,
                         textAlign: TextAlign.center,
                       ),
                     ),
                     Text(
-                      "Placeholder for text.",
+                      "No paywalls, no advertisement, no cookies: PARTIMAP is completely free to use and its source code is publically available.",
                       style: bodyTextStyle,
                       textAlign: TextAlign.center,
                     ),
@@ -80,18 +83,21 @@ class Features extends StatelessWidget {
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.only(bottom: 32),
-                      child: Text('Icon'),
+                      child: Icon(
+                        Icons.fingerprint,
+                        size: 40.0,
+                      ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(bottom: 16),
                       child: Text(
-                        "Clear UI",
+                        "Easy customization",
                         style: headlineSecondaryTextStyle,
                         textAlign: TextAlign.center,
                       ),
                     ),
                     Text(
-                      "Placeholder for text.",
+                      "We provide many options to adjust vertices including title, description, color, icon and comments.",
                       style: bodyTextStyle,
                       textAlign: TextAlign.center,
                     ),
@@ -115,7 +121,10 @@ class Features extends StatelessWidget {
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.only(bottom: 32),
-                      child: Text('Icon'),
+                      child: Icon(
+                        Icons.share,
+                        size: 40.0,
+                      ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(bottom: 16),

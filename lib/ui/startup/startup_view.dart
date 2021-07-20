@@ -59,7 +59,7 @@ class StartupView extends StatelessWidget {
                   duration: const Duration(milliseconds: 600),
                   position: index,
                   child: SlideAnimation(
-                    verticalOffset: 100,
+                    verticalOffset: 150,
                     child: blocks[index],
                   ),
                 ),

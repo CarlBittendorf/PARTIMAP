@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 const TextSpan HERAUSGEBER = TextSpan(
     text:
         """Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:
-        
+
 Carl Bittendorf
-        
+
 Email: carl.bittendorf@gmail.com""");
 
 const TextSpan INHALTE = TextSpan(

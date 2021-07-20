@@ -49,6 +49,7 @@ dependencies:
   arrow_path: ^2.0.0
   expandable: ^5.0.1
   oktoast: ^3.0.0
+  animated_text_kit: ^4.2.1
   
 
 dev_dependencies:
