@@ -24,7 +24,22 @@ class StartupView extends StatelessWidget {
         Widget? child,
       ) {
         var blocks = <Widget>[
-          SizedBox(height: 550),
+          BlockWrapper(
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 40.0),
+              child: ConstrainedBox(
+                constraints: BoxConstraints(maxHeight: 500),
+                child: Card(
+                  elevation: 16,
+                  child: Image.asset(
+                    "assets/images/screenshot.png",
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          //SizedBox(height: 550),
           BlockWrapper(
             GetStarted(
               callback: () => model.showCreateDialog(),
