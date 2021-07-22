@@ -62,7 +62,7 @@ PARTIMAP can be used anonymously and without registration.
 
 You can choose between private and public mode. Public maps are visible to all users via the showcase view. Every map can be accessed using its unique link.
 
-The PARTIMAP project was created as part of the "Prototyping and Problem-Solving" course led by Franz Joseph Schmitt at the TU Berlin and MLU Halle-Wittenberg.""",
+The PARTIMAP project was created by Luca von Krueger, Anthony Macha and Carl Bittendorf as part of the "Prototyping and Problem-Solving" course led by Franz Joseph Schmitt at the TU Berlin and MLU Halle-Wittenberg.""",
                             ),
                           ],
                           style: bodyTextStyle,

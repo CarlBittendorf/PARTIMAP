@@ -92,4 +92,4 @@ const TextSpan AENDERUNG = TextSpan(
 
 const TextSpan FRAGEN = TextSpan(
     text:
-        """Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an en Herausgeber.""");
+        """Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an den Herausgeber.""");

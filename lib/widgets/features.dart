@@ -59,7 +59,7 @@ class Features extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "No paywalls, no advertisement, no cookies: PARTIMAP is completely free to use and its source code is publically available.",
+                      "No paywalls, no advertisement, no cookies: PARTIMAP is completely free to use and its source code is publicly available.",
                       style: bodyTextStyle,
                       textAlign: TextAlign.center,
                     ),
